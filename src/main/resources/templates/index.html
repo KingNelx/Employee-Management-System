@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Lists</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body >
+    <div class="bg-gray-700 py-5 text-center text-white mb-5">
+        Employee Management System
+    </div>
+
+    <a th:href="@{/showNewEmployeeForm}" class="mx-10 uppercase underline italic font-bold my-11"> Add Employee </a>
+
+    <h2 th:text="${HeadingTitle}" class="font-sans italic text-2xl ml-8">  </h2>
+
+    <div class="flex flex-col text-center">
+        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                <div class="overflow-hidden">
+                    <table class="min-w-full">
+                        <thead class="border-b">
+                        <tr>
+                            <th  scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
+                                #
+                            </th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
+                                First Name
+                            </th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
+                                Last Name
+                            </th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
+                                Email
+                            </th>
+
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
+                                Action
+                            </th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="employee, iterator:${listEmployees}" class="border-b">
+                            <td th:text="${iterator.index} + 1" class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"></td>
+                            <td th:text="${employee.firstName}" class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+
+                            </td>
+                            <td th:text="${employee.lastName}" class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+
+                            </td>
+                            <td th:text="${employee.email}" class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+
+                            </td>
+                            <td>
+                                <a th:href="@{/showFormUpdate/{id}(id=${employee.id})}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"> UPDATE </a>
+                                <a th:href="@{/deleteEmployee/{id}(id=${employee.id})}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"> DELETE </a>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

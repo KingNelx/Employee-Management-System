@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Employee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<h2 th:text="${HeadingTitle}" class="font-sans italic text-2xl ml-8">  </h2>
+<div class="text-center">
+    <div class="m-8">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="#" th:action="@{/saveEmployee}" th:object="${employee}" method="POST">
+            <input type="hidden" th:field="*{id}" />
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">
+                    First name
+                </label>
+                <input type="text" placeholder="Firstname" required th:field="*{firstName}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" >
+                    Lastname
+                </label>
+                <input type="text" placeholder="Lastname" required th:field="*{lastName}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">
+                    Email
+                </label>
+                <input type="email" placeholder="Email@" required th:field="*{email}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Update Employee
+                </button>
+                <a   class="bg-emerald-300 hover:bg-indigo-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" th:href = "@{/}"> Back to Employee List</a>
+            </div>
+        </form>
+        <p class="text-center text-gray-500 text-xs">
+            &copy;2022 KingNelx-Company. All rights reserved. Pogi lang.
+        </p>
+    </div>
+
+</div>
+</body>
+</html>
