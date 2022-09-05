@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+<div class="bg-gradient-to-r from-cyan-500 to-blue-500">
+  <form>
+    <div class="flex items-center justify-center h-screen bg-gray-100">
+      <div class="bg-white py-6 rounded-md px-10 max-w-lg shadow-md">
+        <h1 class="text-center text-lg font-bold text-gray-500">Form Register</h1>
+        <div class="space-y-4 mt-6">
+          <div class="w-full">
+            <input type="text" placeholder="Firstname" required class="px-4 py-2 bg-gray-50" />
+          </div>
+          <div class="w-full">
+            <input type="text" placeholder="Lastname" required class="px-4 py-2 bg-gray-50" />
+          </div>
+          <div class="w-full">
+            <input type="text" placeholder="Username" required class="px-4 py-2 bg-gray-50" />
+          </div>
+          <div class="w-full">
+            <input type="password" placeholder="Password" required class="px-4 py-2 bg-gray-50" />
+          </div>
+
+          <div class="w-full">
+            <option>Admin</option>
+            <option>User</option>
+            <option></option>
+          </div>
+
+        </div>
+        <button class="w-full mt-5 bg-indigo-600 text-white py-2 rounded-md font-semibold tracking-tight">Register</button>
+      </div>
+    </div>
+  </form>
+
+</div>
+</body>
+</html>

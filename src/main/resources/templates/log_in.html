@@ -2,18 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Log in Form</title>
+    <title>Login Account</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
-    <div class="text-center">
-        <form>
-            <label> Username</label>
-            <input type="text" placeholder="Username or Email" required>
-            <label> Password </label>
-            <input type="password" placeholder="Password" required>
-            <button type="submit"> Log in </button>
-        </form>
-    </div>
+
+<div class="bg-gradient-to-r from-cyan-500 to-blue-500">
+    <form>
+        <div class="flex items-center justify-center h-screen bg-gray-100">
+            <div class="bg-white py-6 rounded-md px-10 max-w-lg shadow-md">
+                <h1 class="text-center text-lg font-bold text-gray-500">Log in</h1>
+                <div class="space-y-4 mt-6">
+                    <div class="w-full">
+                        <input type="text" placeholder="Username" class="px-4 py-2 bg-gray-50" />
+                    </div>
+                    <div class="w-full">
+                        <input type="password" placeholder="Password" class="px-4 py-2 bg-gray-50" />
+                    </div>
+                    <div class="w-full">
+                        <select>
+                            <option class="px-4 py-2 bg-gray-50"> Test1 </option>
+                            <option class="px-4 py-2 bg-gray-50"> Test2 </option>
+                            <option class="px-4 py-2 bg-gray-50"> Test3 </option>
+                        </select>
+                    </div>
+                    <div>
+                        <a href="" class="text-sky-500 text-sm">Forgot password?</a>
+                    </div>
+                </div>
+                <button class="w-full mt-5 bg-indigo-600 text-white py-2 rounded-md font-semibold tracking-tight">Log in</button>
+            </div>
+        </div>
+    </form>
+
+</div>
 </body>
 </html>

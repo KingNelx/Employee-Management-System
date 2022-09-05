@@ -58,5 +58,15 @@ public class EmployeeController {
         this.employeeService.deleteEmployee(id);
         return "redirect:/";
         }
+
+    @GetMapping("/login")
+    public String homeLogin(){
+        return "log_in";
     }
 
+    @GetMapping("/createAccount")
+    public String createAccount(){
+        return "create_Account";
+    }
+
+}
